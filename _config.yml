@@ -1,22 +1,7 @@
-title: 轻量网络访问指南
-description: 面向中文用户的 VPN、网络加速、流媒体访问、游戏延迟优化和远程办公网络稳定性指南，帮助用户理解工具选择、使用场景和安全边界。
-url: "https://ximenshu.github.io"
-baseurl: "/juechen-vpn-guide"
-lang: zh-CN
-timezone: Asia/Shanghai
-permalink: /:categories/:title/
-
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "default"
-      author: "轻量网络访问指南编辑部"
-
-plugins:
-  - jekyll-sitemap
-
-exclude:
-  - README.md
-  - publish-checklist.md
+title: "网络加速器指南"
+description: "面向中文用户的网络加速器、游戏延迟、视频加载、社交软件连接、远程办公和跨境网络访问指南。"
+lang: "zh-CN"
+url: "https://woshiprog.github.io"
+baseurl: "/network-accelerator-guide"
+timezone: "Asia/Shanghai"
+author: "网络加速器指南编辑部"
