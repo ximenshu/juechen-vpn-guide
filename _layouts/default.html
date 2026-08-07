@@ -1,59 +1,75 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D2NJELDR3X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2NJELDR3X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D2NJELDR3X');
+  </script>
 
-  gtag('config', 'G-D2NJELDR3X');
-      </script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <meta name="description" content="{{ page.description | default: site.description }}">
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
-    <meta property="og:description" content="{{ page.description | default: site.description }}">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta name="google-site-verification" content="o5L7XSaaQ47cSW0MYdBlAvXkc1hf6uQMmIffhdxhEzU">
+  <meta name="msvalidate.01" content="72D1368100F04E271E3EC2CC04D06B2D">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "{{ page.title | default: site.title }}",
-      "description": "{{ page.description | default: site.description }}",
-      "inLanguage": "zh-CN",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "{{ site.title }}",
-        "url": "{{ site.url }}{{ site.baseurl }}/"
-      }
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  {% if page.robots %}
+  <meta name="robots" content="{{ page.robots }}">
+  {% endif %}
+
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:type" content="{{ page.og_type | default: 'article' }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": {{ page.schema_type | default: "WebPage" | jsonify }},
+    "name": {{ page.title | default: site.title | jsonify }},
+    "description": {{ page.description | default: site.description | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": {{ site.title | jsonify }},
+      "url": {{ "/" | absolute_url | jsonify }}
     }
-    </script>
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="{{ site.baseurl }}/">轻量网络访问指南</a>
-      <nav aria-label="主导航">
-        <a href="{{ site.baseurl }}/">首页</a>
-        <a href="{{ site.baseurl }}/guide/vpn-network-accelerator/">VPN与加速器</a>
-        <a href="{{ site.baseurl }}/guide/streaming-game-remote-work/">使用场景</a>
-        <a href="https://www.juechenjsq.com/" rel="nofollow sponsored">绝尘加速器官网</a>
-      </nav>
-    </header>
+  }
+  </script>
 
-    <main class="page">
-      {{ content }}
-    </main>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
 
-    <footer class="site-footer">
-      <p>本站整理 VPN、网络加速和访问体验优化相关知识。请根据所在地法律法规、平台规则和个人实际需求合规使用相关工具。</p>
-    </footer>
-  </body>
+<body>
+  <header class="site-header">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+
+    <nav aria-label="主导航">
+      <a href="{{ '/' | relative_url }}">首页</a>
+      <a href="{{ '/guide/streaming-buffering-fix/' | relative_url }}">流媒体</a>
+      <a href="{{ '/guide/game-latency-guide/' | relative_url }}">游戏</a>
+      <a href="{{ '/guide/remote-work-network/' | relative_url }}">远程办公</a>
+      <a href="{{ '/guide/public-wifi-safety/' | relative_url }}">公共网络</a>
+      <a href="{{ '/guide/multi-device-network-tool/' | relative_url }}">多设备</a>
+      <a href="{{ '/review/juechen-accelerator-scenarios/' | relative_url }}">绝尘加速器</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>本站整理网络加速和访问稳定性相关知识。请根据所在地法律法规、平台规则和个人实际需求合规使用相关工具。</p>
+  </footer>
+</body>
 </html>
