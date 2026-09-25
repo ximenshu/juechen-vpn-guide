@@ -1,25 +1,21 @@
 ---
 layout: default
 title: "页面未找到 | 网络访问稳定性指南"
-description: "当前访问的页面不存在，请返回首页或查看流媒体、游戏、远程办公及网络安全相关专题。"
+description: "当前地址不存在。可按视频、游戏、远程办公、公共网络或网络工具问题重新进入对应指南。"
 permalink: /404.html
 robots: noindex
 og_type: website
 schema_type: WebPage
+date_modified: "2026-09-25"
 ---
 
-<h1>页面未找到</h1>
-
-<p>这个链接可能已经变更，或者页面还在整理中。你可以从下面几个专题继续阅读。</p>
-
-<h2>推荐专题</h2>
-
-<ul>
-  <li><a href="/juechen-vpn-guide/">返回首页</a></li>
-  <li><a href="/juechen-vpn-guide/guide/streaming-buffering-fix/">流媒体播放卡顿怎么排查</a></li>
-  <li><a href="/juechen-vpn-guide/guide/game-latency-guide/">游戏延迟高怎么办</a></li>
-  <li><a href="/juechen-vpn-guide/guide/remote-work-network/">远程办公网络不稳定怎么办</a></li>
-  <li><a href="/juechen-vpn-guide/guide/public-wifi-safety/">公共 Wi-Fi 使用安全指南</a></li>
-  <li><a href="/juechen-vpn-guide/guide/multi-device-network-tool/">多设备使用网络工具怎么选</a></li>
-  <li><a href="/juechen-vpn-guide/review/juechen-accelerator-scenarios/">绝尘加速器适合哪些使用场景</a></li>
-</ul>
+<h1>这个页面不存在</h1>
+<p>链接可能已经变更。你可以按正在遇到的现象继续：</p>
+<div class="grid-links">
+  <a class="card" href="{{ '/guide/video-loading-slow/' | relative_url }}"><strong>视频一直转圈</strong>排查起播慢、首帧慢。</a>
+  <a class="card" href="{{ '/guide/streaming-buffering-fix/' | relative_url }}"><strong>视频播放中卡顿</strong>排查缓冲、降清晰度。</a>
+  <a class="card" href="{{ '/guide/game-latency-guide/' | relative_url }}"><strong>游戏 Ping 高</strong>排查高延迟和延迟尖峰。</a>
+  <a class="card" href="{{ '/guide/game-packet-loss-fix/' | relative_url }}"><strong>游戏瞬移/丢包</strong>判断丢包发生在哪一层。</a>
+  <a class="card" href="{{ '/guide/remote-work-network/' | relative_url }}"><strong>远程会议不稳</strong>从 RTT、抖动和丢包判断。</a>
+  <a class="card" href="{{ '/' | relative_url }}"><strong>返回首页</strong>查看完整问题导航。</a>
+</div>

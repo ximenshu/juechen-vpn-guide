@@ -1,4 +1,7 @@
+---
+layout: null
+---
 User-agent: *
 Allow: /
 
-Sitemap: https://ximenshu.github.io/juechen-vpn-guide/sitemap.xml
+Sitemap: {{ '/sitemap.xml' | absolute_url }}
