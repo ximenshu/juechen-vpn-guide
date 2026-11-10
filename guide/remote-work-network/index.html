@@ -8,7 +8,7 @@ schema_type: Article
 date_modified: "2026-11-10"
 ---
 
-<h1>远程办公网络不稳定怎么办：先把“会议卡”翻译成具体症状</h1>
+<h1>远程办公网络不稳定怎么办：声音断续、画面卡，先看哪里出了问题</h1>
 <p class="lede">先问“谁听不清谁”：别人听你断续，先查你的上行/发送侧；你听别人断续，先查接收侧和本地网络；双方明显抢话，先看 RTT；画面差但声音正常，还要查设备负载和视频带宽。</p>
 
 <h2>从症状反推应该看什么</h2>
@@ -30,13 +30,9 @@ date_modified: "2026-11-10"
 <li><strong>暂停非必要上传和高负载程序：</strong>先停云盘同步、大文件上传和多余标签页/应用，再看声音、画面或远程操作是否恢复。</li>
 </ol>
 
-<h2>优先看会议软件自己的统计</h2>
-<p>如果平台提供实时统计，优先使用它，因为这些数据与实际会议流更接近。Zoom 的会议统计可以显示 latency、jitter、packet loss 等；Microsoft Teams 的质量工具同样把 RTT、jitter 和 packet loss 作为关键指标。不同平台给出的“推荐阈值”是各自产品语境下的参考，不应混成一个通用网络标准。</p>
-<p>如果你没有权限看到管理员级报表，也不用因此停在这里：先记录会议里最稳定复现的症状，再做有线/无线和后台上传两个对照。只有公司网络下复现、家庭网络正常时，把结果交给 IT 管理员比继续更换个人设备更有价值。</p>
-
-<p>Google Meet 的官方排障同样建议在可用时测试 Ethernet、优先较稳定的 5 GHz Wi‑Fi，并检查设备资源与后台程序；因此上面的三步既能排除网络链路，也能快速发现设备负载问题。</p>
-
-<h2>会议里怎么收集更有用的线索</h2><p>会议异常时，先记下是“别人听不清你”，还是“你听不清别人”；再看软件是否提供会议质量或网络统计信息。常见指标包括往返延迟（RTT）、抖动（jitter）和丢包（packet loss），具体入口会随软件和版本变化。</p><p>如果别人听你断断续续，可先暂停云盘备份、视频上传等任务并重试；如果只是画面停顿而音频正常，检查摄像头、CPU 占用和视频设置。不要只拿一次下载测速下结论。</p>
+<h2>会议里哪些数据值得看</h2>
+<p>Zoom 的会议统计中可以查看延迟、抖动和丢包；Teams 也提供通话质量信息，但具体入口和权限会随客户端及账号变化。没有统计入口也没关系：记下问题出现的时间、谁听不清谁，再暂停云盘上传或改用有线连接，看看同一个症状是否消失。Google Meet 也建议排查设备负载和后台程序。</p>
+<p>如果只在公司网络下出现、家庭网络正常，把时间和测试结果交给 IT 管理员；如果声音一直正常、只有画面卡，先检查摄像头和 CPU 占用。</p>
 <h2>远程桌面和视频会议不要混为一谈</h2>
 <p>远程桌面更敏感于交互延迟；视频会议则同时依赖音频、视频和上行稳定。若只有远程桌面操作“慢半拍”而会议正常，应优先查 RTT、目标主机和远程服务路径，而不是直接沿用视频会议的带宽判断。</p>
 
@@ -46,12 +42,12 @@ date_modified: "2026-11-10"
 <h2>什么时候不要继续折腾网络</h2>
 <p>如果有线和网络指标都稳定，但只有某台旧设备持续发热、画面卡或摄像头异常，设备性能和外设会成为更强线索；如果只有企业网络环境复现，还要考虑防火墙、安全检查或管理员配置。Google Meet 官方排障也明确把设备资源和网络设备配置列为可能因素。</p>
 
-<h2>可靠来源</h2>
+<h2>参考资料</h2>
 <ul class="source-list">
 <li><a href="https://support.google.com/meet/answer/10620583">Google Meet Help：Troubleshoot video &amp; audio quality</a></li>
 <li><a href="https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0070504">Zoom Support：Meeting and phone statistics</a></li>
 <li><a href="https://learn.microsoft.com/en-us/microsoftteams/qos-in-teams">Microsoft Learn：Quality of Service in Teams</a></li>
 </ul>
 
-<aside class="article-promo" aria-label="广告：绝尘加速器"><div class="ad-label">广告 · 绝尘加速器</div><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="访问绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器横幅广告：点击查看服务方介绍" width="1280" height="160" loading="lazy" decoding="async"></a><p class="ad-footnote">这是一则推广广告。是否适合你的设备、所在地区及使用场景，请以实际产品说明和体验为准。</p></aside>
-<section class="article-end" aria-label="继续阅读"><h2>接下来可以看</h2><ul><li><a href="{{ '/guide/public-wifi-safety/' | relative_url }}">公共 Wi-Fi 安全</a></li></ul></section>
+<aside class="article-promo" aria-label="广告：绝尘加速器"><div class="ad-label">广告</div><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="访问绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器广告横幅" width="1280" height="160" loading="lazy" decoding="async"></a><a class="mobile-ad-link" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer">查看绝尘加速器 ↗</a></aside>
+<section class="article-end" aria-label="继续阅读"><h2>相关问题</h2><ul><li><a href="{{ '/guide/public-wifi-safety/' | relative_url }}">公共 Wi-Fi 安全</a></li></ul></section>

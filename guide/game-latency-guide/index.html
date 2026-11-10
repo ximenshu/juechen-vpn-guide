@@ -23,11 +23,11 @@ date_modified: "2026-11-10"
 
 <h2>最有价值的第一个测试：Wi‑Fi 和有线对照</h2>
 <p>如果条件允许，用同一电脑、同一游戏、同一区服，在相近时间从 Wi‑Fi 改为有线。若尖峰明显减少，本地无线链路优先级会明显上升；若有线下仍稳定偏高，则需要继续看区服距离、外部路径和时间因素。</p>
-<h2>再做一个“空闲 vs 家庭网络忙”的对照</h2>
-<p>如果 Ping 平时正常，但家里有人上传照片、云盘同步或下载时突然飙高，线索更接近本地排队/拥塞，而不是游戏区服突然变远。可以在其他大流量任务暂停前后比较同一局或同一测试目标；如果尖峰随负载明显变化，先处理家庭网络占用。</p>
+<h2>家里有人上传文件时 Ping 飙高？</h2>
+<p>先暂停云盘同步、视频上传或大型下载，再看看同一区服的延迟是否恢复。恢复得很明显，就该先查家庭网络有没有被占满，尤其是上行带宽。</p>
 
 
-<h2>把延迟问题记录成一句可判断的话</h2><p>例如：“同一台电脑连接同一个区服，平时约 45 ms；家里开始同步大文件后，延迟反复跳到 180 ms；暂停同步后恢复。”这是一条<strong>示例记录</strong>，不是实测数据。重点是记下什么时候发生、是否只在某一操作时发生，以及停止操作后能否恢复。</p><p>打游戏时 Ping 原本很稳，一旦有人上传视频或同步云盘，延迟就突然飙高？先暂停上传，再观察同一区服延迟是否恢复。如果明显恢复，优先检查家里是否出现上行拥塞。此时单纯换区服或连接线路，未必能解决。</p>
+<p><strong>记录示例：</strong>同一区服平时约 45 ms，家人开始同步大文件后跳到 180 ms，暂停同步又恢复。把这种变化记下来，比只截一张“最高 Ping”更有帮助。</p>
 <h2>不要用下载速度解释所有游戏延迟</h2>
 <p>实时游戏更关心往返时间和稳定性。高下载带宽不等于到游戏服务器的路径更短，也不能排除排队、抖动或丢包。Cloudflare 的网络基础资料也把 latency/RTT 与带宽区分开来。</p>
 
@@ -41,33 +41,19 @@ date_modified: "2026-11-10"
 </ol>
 
 <h2>什么时候值得测试线路类工具</h2>
-<p>当有线、本地网络和后台占用都相对稳定，而特定区服仍持续高延迟或路径表现不佳时，可以做工具前后对照。保持同一区服、同一设备、相近时间，只改变线路变量，并至少观察完整一局，而不是截取一个瞬时最低 Ping。</p>
+<p>当有线、本地网络和后台占用都相对稳定，而特定区服仍持续高延迟或路径表现不佳时，可以做工具前后对照。保持同一区服、同一设备、相近时间，只改变线路，并至少观察完整一局，而不是截取一个瞬时最低 Ping。</p>
 
 <div class="callout">
 <strong>不要把示例阈值当作游戏统一标准。</strong>不同游戏、区服和玩家距离的合理 RTT 不同。页面更关注“同条件下是否稳定、是否出现尖峰”，而不是给所有游戏设一个固定的好坏分数。
 </div>
 <p class="meta-note">另外，ping 本地网关或公共目标只能帮助缩小范围，不等于实际游戏流量一定走相同路径；最终仍要结合游戏内指标和真实对局表现。</p>
 
-<h2>按测试结果选择下一步</h2>
-<ul>
-<li>有线后尖峰明显减少：继续处理 Wi‑Fi/家庭网络，不要急着换远端线路。</li>
-<li>有线仍稳定偏高：核对区服和距离，再做不同时段对照。</li>
-<li>只有晚间变差：进入 <a href="{{ '/guide/peak-hour-network-slow/' | relative_url }}">晚高峰诊断</a>。</li>
-<li>主要是瞬移、回弹、断字：进入 <a href="{{ '/guide/game-packet-loss-fix/' | relative_url }}">丢包定位</a>。</li>
-</ul>
-
-<h2>可靠来源</h2>
+<h2>参考资料</h2>
 <ul class="source-list">
 <li><a href="https://www.cloudflare.com/learning/performance/glossary/what-is-latency/">Cloudflare Learning Center：What is latency?</a></li>
 <li><a href="https://www.intel.com/content/www/us/en/gaming/resources/how-to-fix-packet-loss.html">Intel：How to Fix Packet Loss</a></li>
 </ul>
 
-<h2>相关阅读</h2>
-<ul>
-<li><a href="{{ '/guide/game-packet-loss-fix/' | relative_url }}">游戏丢包、瞬移和断流怎么定位</a></li>
-<li><a href="{{ '/guide/peak-hour-network-slow/' | relative_url }}">为什么只有晚上 Ping 变高</a></li>
-<li><a href="{{ '/review/juechen-accelerator-scenarios/' | relative_url }}">绝尘加速器哪些网络问题值得测试</a></li>
-</ul>
 
-<aside class="article-promo" aria-label="广告：绝尘加速器"><div class="ad-label">广告 · 绝尘加速器</div><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="访问绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器横幅广告：点击查看服务方介绍" width="1280" height="160" loading="lazy" decoding="async"></a><p class="ad-footnote">这是一则推广广告。是否适合你的设备、所在地区及使用场景，请以实际产品说明和体验为准。</p></aside>
-<section class="article-end" aria-label="继续阅读"><h2>接下来可以看</h2><ul><li><a href="{{ '/guide/game-packet-loss-fix/' | relative_url }}">游戏丢包怎么排查</a></li><li><a href="{{ '/guide/peak-hour-network-slow/' | relative_url }}">晚间网络变慢</a></li></ul></section>
+<aside class="article-promo" aria-label="广告：绝尘加速器"><div class="ad-label">广告</div><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="访问绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器广告横幅" width="1280" height="160" loading="lazy" decoding="async"></a><a class="mobile-ad-link" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer">查看绝尘加速器 ↗</a></aside>
+<section class="article-end" aria-label="继续阅读"><h2>相关问题</h2><ul><li><a href="{{ '/guide/game-packet-loss-fix/' | relative_url }}">游戏丢包怎么排查</a></li><li><a href="{{ '/guide/peak-hour-network-slow/' | relative_url }}">晚间网络变慢</a></li></ul></section>

@@ -1,19 +1,19 @@
 ---
 layout: default
-title: "网络访问稳定性指南：视频、游戏、远程办公问题怎么判断"
-description: "从可观察的现象出发，帮助你区分视频起播慢、播放卡顿、游戏高延迟、丢包、晚高峰和远程会议问题，并按步骤定位原因。"
+title: "网络卡顿、游戏延迟、视频缓冲怎么办？ | 网络稳定指南"
+description: "视频一直转圈、打游戏 Ping 高、晚上网速慢、会议声音断续？按症状排查 Wi-Fi、设备和网络连接。"
 permalink: /
 og_type: website
 schema_type: WebSite
 date_modified: "2026-11-10"
 ---
 
-<section class="hero"><p class="hero-eyebrow">NETWORK TROUBLESHOOTING</p><h1>网络卡在哪？<br>从症状找到答案。</h1>
-<p class="lede">游戏延迟、视频缓冲、会议断续、晚上网速变慢……不必靠猜。选一个最接近的症状，先做简单排查，再决定是否需要网络工具。</p>
+<section class="hero"><h1>视频卡、游戏掉线？<br>先查清原因。</h1>
+<p class="lede">播放转圈、游戏延迟忽高忽低、会议声音断断续续——从你遇到的问题开始查，先排除常见原因。</p>
 
-<div class="hero-actions"><a class="btn btn-primary" href="#problems">按问题开始排查 ↓</a><a class="btn btn-secondary" href="https://ximenshu.github.io/vpn-selection-guide/" target="_blank" rel="noopener noreferrer">VPN 怎么选 ↗</a></div></section>
-<div class="home-promo" aria-label="广告"><span class="ad-label">广告 · 绝尘加速器</span><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="查看绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器横幅广告：点击前往其网站了解下载和服务详情" width="1280" height="160" fetchpriority="high" decoding="async"></a><p class="ad-footnote">推广信息由广告素材提供；套餐、价格、隐私及可用性请以服务方当前说明为准。</p></div>
-<div class="home-content"><div class="section-kicker">FIND YOUR FIX</div><h2 id="problems">你遇到的是哪种情况？</h2><p class="home-intro">直接打开对应指南，不用从头读完所有网络术语。</p>
+<div class="hero-actions"><a class="btn btn-primary" href="#problems">看看怎么解决 ↓</a></div></section>
+<div class="home-promo" aria-label="广告"><span class="ad-label">广告 · 绝尘加速器</span><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="查看绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器横幅广告：点击前往其网站了解下载和服务详情" width="1280" height="160" fetchpriority="high" decoding="async"></a><a class="mobile-ad-link" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer">查看绝尘加速器 ↗</a></div>
+<div class="home-content"><h2 id="problems">找找你遇到的问题</h2><p class="home-intro">选最接近的一项，先试对应的排查方法。</p>
 <h3>视频</h3>
 <div class="grid-links">
   <a class="card" href="{{ '/guide/video-loading-slow/' | relative_url }}"><strong>视频迟迟不能开始播放</strong>页面能开，但播放器一直转圈、首帧很慢。</a>
@@ -35,31 +35,19 @@ date_modified: "2026-11-10"
 
 <h3>网络工具</h3>
 <div class="grid-links">
-  <a class="card" href="{{ '/guide/network-tool-for-beginners/' | relative_url }}"><strong>第一次测试网络加速工具</strong>用控制变量的方法判断它到底有没有解决你的问题。</a>
+  <a class="card" href="{{ '/guide/network-tool-for-beginners/' | relative_url }}"><strong>第一次测试网络加速工具</strong>看看开关工具前后，视频、游戏或会议有没有真正改善。</a>
   <a class="card" href="{{ '/guide/multi-device-network-tool/' | relative_url }}"><strong>手机、电脑等多台设备一起用</strong>分清平台兼容、安装数量、同时连接和账号规则。</a>
 </div>
 
-<h2>如果你只知道“卡”，先看症状而不是猜原因</h2>
-<table>
-  <thead><tr><th>你看到的现象</th><th>最有价值的第一个测试</th><th>下一页</th></tr></thead>
-  <tbody>
-    <tr><td>视频点开后一直转圈</td><td>同一视频比较 App/浏览器、Wi‑Fi/另一网络</td><td><a href="{{ '/guide/video-loading-slow/' | relative_url }}">视频加载慢</a></td></tr>
-    <tr><td>视频播放一会儿就停</td><td>同一内容改有线/热点或关闭同网大流量任务</td><td><a href="{{ '/guide/streaming-buffering-fix/' | relative_url }}">流媒体卡顿</a></td></tr>
-    <tr><td>游戏操作慢半拍</td><td>看延迟是持续偏高还是偶发尖峰</td><td><a href="{{ '/guide/game-latency-guide/' | relative_url }}">游戏延迟</a></td></tr>
-    <tr><td>游戏瞬移、回弹、断字</td><td>先测设备到本地网关这一段是否稳定</td><td><a href="{{ '/guide/game-packet-loss-fix/' | relative_url }}">游戏丢包</a></td></tr>
-    <tr><td>只有晚上变差</td><td>同设备、同目标、同连接方式做跨时段对照</td><td><a href="{{ '/guide/peak-hour-network-slow/' | relative_url }}">晚高峰网络</a></td></tr>
-    <tr><td>会议里声音断续</td><td>先看发送/接收方向，再看 jitter、packet loss、RTT</td><td><a href="{{ '/guide/remote-work-network/' | relative_url }}">远程办公网络</a></td></tr>
-  </tbody>
-</table>
+<h2>不确定从哪儿查？先试这三步</h2>
+<ol class="quick-steps">
+<li><strong>换一台设备。</strong>只有一台卡，先查这台设备或它的无线连接。</li>
+<li><strong>换一种连接。</strong>有条件的话用网线试一次；只有 Wi-Fi 卡，先排除信号和干扰。</li>
+<li><strong>记下发生时间。</strong>如果每天晚上才变慢，查查家里是否有人备份、下载或看高清视频。</li>
+</ol>
+<p>本地网络没查出明显问题，但某个服务还是卡？看看<a href="{{ '/guide/network-tool-for-beginners/' | relative_url }}">怎样比较不同连接线路</a>。手机、电脑都要使用网络工具，可以先确认<a href="{{ '/guide/multi-device-network-tool/' | relative_url }}">同时连接和账号限制</a>。</p>
 
-<h2>先做一个最简单的判断</h2><p>同一个问题，如果换成有线网络就消失，先排查无线连接；如果换设备后消失，先看原设备；如果只在固定时段出现，再对比白天与晚上。想完整比较不同线路或工具，可以参考 <a href="{{ '/guide/network-tool-for-beginners/' | relative_url }}">第一次使用网络工具</a>。</p>
-<h2>什么时候再考虑网络工具</h2>
-<p>如果问题已经发生在本地 Wi‑Fi、设备性能或家庭路由器这一层，线路类工具通常不是第一优先级。只有在本地连接相对稳定，而特定远端服务、区服或时段持续异常时，才更值得做工具前后的对照测试。</p>
-<p>第一次使用此类工具，先看 <a href="{{ '/guide/network-tool-for-beginners/' | relative_url }}">网络工具新手测试方法</a>；有多台设备时，看 <a href="{{ '/guide/multi-device-network-tool/' | relative_url }}">多设备选择与使用要点</a>。</p>
-
-<h2>关于绝尘加速器</h2>
-<p>如果你已经在考虑绝尘加速器，可以先看 <a href="{{ '/review/juechen-accelerator-scenarios/' | relative_url }}">哪些场景值得测试</a>；准备开始使用时，看 <a href="{{ '/review/juechen-accelerator-faq/' | relative_url }}">连接步骤与平台说明</a>。需要下载、连接或多设备使用时，可以从使用指南直接开始。</p>
-
-<p class="meta-note">想了解本站？<a href="{{ '/about/' | relative_url }}">关于网络稳定指南</a></p>
+<h2>绝尘加速器</h2>
+<div class="grid-links"><a class="card" href="{{ '/review/juechen-accelerator-faq/' | relative_url }}"><strong>安装、连接和多设备使用</strong>查看客户端常见操作与注意事项。</a><a class="card" href="{{ '/review/juechen-accelerator-scenarios/' | relative_url }}"><strong>哪些问题值得试试线路工具</strong>了解不同网络问题下的适用情况。</a></div>
 
 </div>

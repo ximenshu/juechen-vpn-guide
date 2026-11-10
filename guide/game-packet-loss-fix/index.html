@@ -8,10 +8,10 @@ schema_type: Article
 date_modified: "2026-11-10"
 ---
 
-<h1>游戏丢包怎么办：不要先问“换哪个工具”，先找丢在哪一段</h1>
+<h1>游戏丢包怎么办：先检查 Wi‑Fi 和路由器</h1>
 <p class="lede">先回答一个最有用的问题：<strong>设备到家里路由器这一段是否已经丢包？</strong>如果答案是“是”，远端线路不是第一优先级；如果本地稳定，再把测试推进到公网和游戏内指标。</p>
 
-<h2>第一步：先确认症状更像丢包还是高延迟</h2>
+<h2>第一步：区分丢包和高延迟</h2>
 <table>
 <thead><tr><th>现象</th><th>更像什么</th></tr></thead>
 <tbody>
@@ -42,7 +42,7 @@ ping 192.168.1.1 -n 30</code></pre><p><strong>注意：</strong><code>192.168.1.
 <tr><td>网关不稳定</td><td>先修本地 Wi‑Fi/LAN；用有线复测</td></tr>
 <tr><td>网关稳定，公网不稳定</td><td>跨时段复测；检查是否所有设备同时受影响</td></tr>
 <tr><td>网关和公网都稳定，只有游戏异常</td><td>比较区服、游戏内网络指标和目标服务状态</td></tr>
-<tr><td>只有晚间出现</td><td>进入晚高峰 A/B 测试</td></tr>
+<tr><td>只有晚间出现</td><td>进入晚高峰 对照测试</td></tr>
 </tbody>
 </table>
 
@@ -50,22 +50,17 @@ ping 192.168.1.1 -n 30</code></pre><p><strong>注意：</strong><code>192.168.1.
 <p>带宽容量和丢包不是同一个指标。即使套餐下载速度很高，只要 Wi‑Fi 链路不稳、网络设备异常或某段路径持续丢数据包，实时游戏仍会出现断续。先定位位置，再决定是否需要升级设备、调整家庭网络或测试其他路径。</p>
 
 <h2>网络工具怎么测才有意义</h2>
-<p>只有当本地网关稳定，而问题更像出在远端路径时，线路工具的 A/B 测试才更有解释力。测试前后保持同一游戏、同一区服、同一设备和相近时段，记录丢包/延迟现象是否稳定变化；不要用一次最低值推断长期效果。</p>
+<p>只有当本地网关稳定，而问题更像出在远端路径时，线路工具的 对照测试才更容易看出差别。测试前后保持同一游戏、同一区服、同一设备和相近时段，记录丢包/延迟现象是否稳定变化；不要用一次最低值推断长期效果。</p>
 
 <h2>两个容易误判的结果</h2>
 <p><strong>“本地网关不丢，为什么游戏还丢？”</strong> 因为公网路径、游戏服务链路和实际游戏协议仍可能不同；继续用公网对照与游戏内指标缩小范围，而不是把本地测试当作“全网正常”的证明。</p>
 <p><strong>“一次没丢是不是就没问题？”</strong> 不是。短时问题需要在故障最容易出现的时段重复测试，尤其是晚间或家庭并发较高时。</p>
 
-<h2>可靠来源</h2>
+<h2>参考资料</h2>
 <ul class="source-list">
 <li><a href="https://www.intel.com/content/www/us/en/gaming/resources/how-to-fix-packet-loss.html">Intel：How to Fix Packet Loss</a> — 区分高速带宽与丢包，并建议有线对照、检查路由器和家庭拥塞。</li>
 </ul>
 
-<h2>相关阅读</h2>
-<ul>
-<li><a href="{{ '/guide/game-latency-guide/' | relative_url }}">Ping 高与延迟尖峰怎么判断</a></li>
-<li><a href="{{ '/guide/peak-hour-network-slow/' | relative_url }}">只有晚上丢包/延迟变差怎么验证</a></li>
-</ul>
 
-<aside class="article-promo" aria-label="广告：绝尘加速器"><div class="ad-label">广告 · 绝尘加速器</div><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="访问绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器横幅广告：点击查看服务方介绍" width="1280" height="160" loading="lazy" decoding="async"></a><p class="ad-footnote">这是一则推广广告。是否适合你的设备、所在地区及使用场景，请以实际产品说明和体验为准。</p></aside>
-<section class="article-end" aria-label="继续阅读"><h2>接下来可以看</h2><ul><li><a href="{{ '/guide/game-latency-guide/' | relative_url }}">游戏延迟高怎么办</a></li><li><a href="{{ '/guide/peak-hour-network-slow/' | relative_url }}">晚高峰网络变慢</a></li></ul></section>
+<aside class="article-promo" aria-label="广告：绝尘加速器"><div class="ad-label">广告</div><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="访问绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器广告横幅" width="1280" height="160" loading="lazy" decoding="async"></a><a class="mobile-ad-link" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer">查看绝尘加速器 ↗</a></aside>
+<section class="article-end" aria-label="继续阅读"><h2>相关问题</h2><ul><li><a href="{{ '/guide/game-latency-guide/' | relative_url }}">游戏延迟高怎么办</a></li><li><a href="{{ '/guide/peak-hour-network-slow/' | relative_url }}">晚高峰网络变慢</a></li></ul></section>

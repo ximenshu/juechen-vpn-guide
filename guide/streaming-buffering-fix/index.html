@@ -8,7 +8,7 @@ schema_type: Article
 date_modified: "2026-11-10"
 ---
 
-<h1>流媒体播放卡顿怎么办：先看它是怎么“卡”的</h1>
+<h1>流媒体播放卡顿怎么办：视频为什么播一会儿就停</h1>
 <p class="lede">如果视频已经开始播放，之后才反复缓冲、降清晰度或中断，先不要重装 App。先看“所有设备都卡、只有一台卡、只有晚间卡、还是只有一个平台卡”，这四个差异通常比一次测速更能缩小范围。</p>
 <div class="callout"><strong>快速判断：</strong>只有一台设备卡，先查设备/Wi‑Fi；所有设备同一时段都卡，查共同网络；只有一个平台卡，查目标服务或到它的路径；只有晚间卡，做跨时段对照。若视频根本还没开始播放，请转到 <a href="{{ '/guide/video-loading-slow/' | relative_url }}">视频加载慢</a>。</div>
 
@@ -18,7 +18,7 @@ date_modified: "2026-11-10"
 <tbody>
 <tr><td>清晰度不断自动下降，但很少完全停住</td><td>持续可用带宽是否接近播放需求</td><td>降低一档清晰度做对照；检查同网设备占用</td></tr>
 <tr><td>画质正常，偶尔突然长时间停住</td><td>瞬时网络中断、丢包或 Wi‑Fi 波动</td><td>同设备改有线/热点，观察是否消失</td></tr>
-<tr><td>只有晚间明显卡</td><td>时间相关拥塞或家庭并发</td><td>按相同条件做白天/晚间 A/B</td></tr>
+<tr><td>只有晚间明显卡</td><td>时间相关拥塞或家庭并发</td><td>按相同条件做白天/晚间 前后对照</td></tr>
 <tr><td>电视卡，手机在同网络正常</td><td>电视端 Wi‑Fi、App 或设备能力</td><td>同一视频跨设备对比</td></tr>
 <tr><td>只有一个平台卡</td><td>目标平台或到该服务的连接路径</td><td>同一时间测试另一平台</td></tr>
 </tbody>
@@ -29,7 +29,7 @@ date_modified: "2026-11-10"
 <p>还要区分<strong>网络缓冲</strong>和<strong>设备解码/渲染卡顿</strong>：如果声音连续、画面掉帧或设备明显发热，而播放器没有出现重新缓冲，设备性能也应进入排查；如果播放器明确转圈、重新缓冲或清晰度自动下调，网络侧线索更强。</p>
 <p>YouTube 的官方资料给出了 1080p、4K 等格式的持续速度建议，并建议在播放问题中比较不同网络、关闭其他程序或改用有线连接。这些数字适合作为平台参考，不应被当成所有视频服务的统一门槛。</p>
 
-<h2>用 15 分钟做一次有意义的对照</h2>
+<h2>先连续播放一会儿，再换网络试</h2>
 <ol>
 <li>选一个会稳定复现问题的视频或直播。</li>
 <li>记录当前设备、清晰度、网络和大致时间。</li>
@@ -42,17 +42,17 @@ date_modified: "2026-11-10"
 <h2>如果只有晚高峰卡</h2>
 <p>不要把“晚上人多”当成结论。用同设备、同位置、同平台、同清晰度，在白天和晚间重复测试。若晚间所有设备同时变差，问题更可能位于共同网络路径；若只有一台设备变差，则设备/Wi‑Fi 因素仍要优先。完整方法见 <a href="{{ '/guide/peak-hour-network-slow/' | relative_url }}">晚高峰网络变慢怎么判断</a>。</p>
 
-<h2>如果第一轮对照没有定位，下一步做什么</h2>
-<p>优先做最能排除一整类原因的测试：同一视频跨设备、同一设备改有线/热点、同一平台跨时段。只有这些结果都指向“本地设备和 Wi‑Fi 相对稳定，但某个远端服务仍异常”时，线路变量才值得进入测试。</p>
+<h2>还没找到原因怎么办</h2>
+<p>优先做最能排除一整类原因的测试：同一视频跨设备、同一设备改有线/热点、同一平台跨时段。只有这些结果都指向“本地设备和 Wi‑Fi 相对稳定，但某个远端服务仍异常”时，线路才值得进入测试。</p>
 
-<h2>什么时候才需要测试不同线路</h2>
-<p>如果设备和本地网络已经稳定，而同一远端服务仍持续异常，才把线路作为一个新变量。不要同时换设备、Wi‑Fi、视频和线路；否则即使改善也无法解释原因。需要测试绝尘时，先看 <a href="{{ '/review/juechen-accelerator-scenarios/' | relative_url }}">哪些问题值得做对照</a>。</p>
+<h2>换线路有没有用</h2>
+<p>如果设备和本地网络已经稳定，而同一远端服务仍持续异常，才把线路作为另一个测试项。不要同时换设备、Wi‑Fi、视频和线路；否则即使改善也无法解释原因。需要测试绝尘时，先看 <a href="{{ '/review/juechen-accelerator-scenarios/' | relative_url }}">哪些问题值得做对照</a>。</p>
 
-<h2>可靠来源</h2>
+<h2>参考资料</h2>
 <ul class="source-list">
 <li><a href="https://support.google.com/youtube/answer/10232409">YouTube Help：Troubleshoot streaming &amp; video issues</a></li>
 <li><a href="https://support.google.com/youtube/answer/78358">YouTube Help：System requirements &amp; supported devices</a></li>
 </ul>
 
-<aside class="article-promo" aria-label="广告：绝尘加速器"><div class="ad-label">广告 · 绝尘加速器</div><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="访问绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器横幅广告：点击查看服务方介绍" width="1280" height="160" loading="lazy" decoding="async"></a><p class="ad-footnote">这是一则推广广告。是否适合你的设备、所在地区及使用场景，请以实际产品说明和体验为准。</p></aside>
-<section class="article-end" aria-label="继续阅读"><h2>接下来可以看</h2><ul><li><a href="{{ '/guide/video-loading-slow/' | relative_url }}">视频无法起播</a></li></ul></section>
+<aside class="article-promo" aria-label="广告：绝尘加速器"><div class="ad-label">广告</div><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="访问绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器广告横幅" width="1280" height="160" loading="lazy" decoding="async"></a><a class="mobile-ad-link" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer">查看绝尘加速器 ↗</a></aside>
+<section class="article-end" aria-label="继续阅读"><h2>相关问题</h2><ul><li><a href="{{ '/guide/video-loading-slow/' | relative_url }}">视频无法起播</a></li></ul></section>

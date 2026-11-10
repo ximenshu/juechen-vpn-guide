@@ -1,14 +1,14 @@
 ---
 layout: default
 title: "晚上网络变慢怎么办：判断晚高峰拥堵还是家庭网络问题"
-description: "用同设备、同目标、同连接方式做白天与晚间 A/B 测试，区分家庭并发、Wi‑Fi 和外部网络的时间相关问题。"
+description: "用同设备、同目标、同连接方式比较白天和晚上的网络表现，区分家庭并发、Wi‑Fi 和外部网络的时间相关问题。"
 permalink: /guide/peak-hour-network-slow/
 og_type: article
 schema_type: Article
 date_modified: "2026-11-10"
 ---
 
-<h1>晚上网络变慢怎么办：先证明它真的是“时间相关”</h1>
+<h1>晚上网络变慢怎么办：白天正常，晚上却很卡</h1>
 <p class="lede">最先要排除的是“晚上刚好家里也更忙”。用同一设备、同一位置、同一目标、同一连接方式，在白天和问题时段做对照；再加一次有线测试，通常就能把“家庭内部”和“共同外部路径”分得更清楚。</p>
 
 <h2>做一组可比较的白天 / 晚间记录</h2>
@@ -16,7 +16,7 @@ date_modified: "2026-11-10"
 <table>
 <thead><tr><th>时间</th><th>连接方式</th><th>同一任务的表现</th><th>延迟/丢包/上下行</th></tr></thead>
 <tbody>
-<tr><td>白天基线</td><td>例如有线</td><td>是否卡顿、掉线</td><td>记录同一测试方法的结果</td></tr>
+<tr><td>白天正常时</td><td>例如有线</td><td>是否卡顿、掉线</td><td>记录同一测试方法的结果</td></tr>
 <tr><td>晚间问题时段</td><td>保持相同</td><td>是否稳定复现</td><td>与白天比较，不与别的目标混比</td></tr>
 <tr><td>晚间对照</td><td>只改 Wi‑Fi / 有线</td><td>症状是否变化</td><td>帮助区分无线与共同出口</td></tr>
 </tbody>
@@ -38,11 +38,11 @@ date_modified: "2026-11-10"
 <tr><td>只有一台设备变差</td><td>设备、客户端或该设备无线连接</td><td>同位置换设备</td></tr>
 <tr><td>有线正常、Wi‑Fi 晚间差</td><td>无线干扰或家庭无线竞争</td><td>调整频段/位置/有线连接</td></tr>
 <tr><td>速度尚可，但 RTT/抖动明显变差</td><td>实时业务更容易受排队/拥塞影响</td><td>重点观察游戏/会议，而非只看 Mbps</td></tr>
-<tr><td>白天晚间都随机变差</td><td>“晚高峰”未必是真正变量</td><td>回到设备、Wi‑Fi和应用层排查</td></tr>
+<tr><td>白天晚间都随机变差</td><td>“晚高峰”未必是真正变量</td><td>回到设备、Wi‑Fi 和应用层排查</td></tr>
 </tbody>
 </table>
 
-<h2>记录示例：别只写“今晚很卡”</h2><p>下面是假设情况，用来说明记录方式，<strong>不是本站的测速结果</strong>：周一下午 3 点，电脑通过有线打开同一个直播正常；晚上 9 点，同设备、同清晰度频繁缓冲，同时其他家人正在进行大文件备份。下一次先暂停备份再测。如果明显改善，家庭带宽竞争比“运营商晚高峰”更值得先排查。</p>
+<h2>记录示例：别只写“今晚很卡”</h2><p>举个例子：周一下午 3 点，电脑通过有线打开同一个直播正常；晚上 9 点，同设备、同清晰度频繁缓冲，同时其他家人正在进行大文件备份。下一次先暂停备份再测。如果明显改善，家庭带宽竞争比“运营商晚高峰”更值得先排查。</p>
 <h2>先排除家庭内部的“晚间变化”</h2>
 <p>很多家庭在晚上会同时看视频、同步照片、下载更新、开电视盒子。先查看是否有持续上传/下载，再比较同一设备的有线和 Wi‑Fi。只有当家庭内部因素相对稳定后，外部拥堵这个解释才更有分量。</p>
 
@@ -53,11 +53,9 @@ date_modified: "2026-11-10"
 <li><strong>会议：</strong>关注 RTT、jitter、packet loss 和上行表现，见 <a href="{{ '/guide/remote-work-network/' | relative_url }}">远程办公网络</a>。</li>
 </ul>
 
-<h2>如果结果仍然模糊</h2>
-<p>把测试再拆成两个问题：<strong>所有设备是否同一时间变差？有线是否也同步变差？</strong>前者帮助判断是否是共同出口，后者帮助把 Wi‑Fi 干扰从外部路径问题中分离出来。没有这两步，单凭“晚上慢”很难判断原因。</p>
 
-<h2>如果要测试网络工具</h2>
-<p>先完成基线记录，再在同一问题时段开启工具，尽量保持设备、目标服务和其他条件不变。一次偶然顺畅不等于稳定改善；至少多次复测后再判断。</p>
+<h2>换线路之前，先记下原来的情况</h2>
+<p>先记录不开工具时的情况，再在同一问题时段开启工具，尽量保持设备、目标服务和其他条件不变。一次偶然顺畅不等于稳定改善；至少多次复测后再判断。</p>
 
-<aside class="article-promo" aria-label="广告：绝尘加速器"><div class="ad-label">广告 · 绝尘加速器</div><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="访问绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器横幅广告：点击查看服务方介绍" width="1280" height="160" loading="lazy" decoding="async"></a><p class="ad-footnote">这是一则推广广告。是否适合你的设备、所在地区及使用场景，请以实际产品说明和体验为准。</p></aside>
-<section class="article-end" aria-label="继续阅读"><h2>接下来可以看</h2><ul><li><a href="{{ '/guide/game-latency-guide/' | relative_url }}">游戏延迟问题</a></li><li><a href="{{ '/guide/streaming-buffering-fix/' | relative_url }}">视频缓冲排查</a></li></ul></section>
+<aside class="article-promo" aria-label="广告：绝尘加速器"><div class="ad-label">广告</div><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="访问绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器广告横幅" width="1280" height="160" loading="lazy" decoding="async"></a><a class="mobile-ad-link" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer">查看绝尘加速器 ↗</a></aside>
+<section class="article-end" aria-label="继续阅读"><h2>相关问题</h2><ul><li><a href="{{ '/guide/game-latency-guide/' | relative_url }}">游戏延迟问题</a></li><li><a href="{{ '/guide/streaming-buffering-fix/' | relative_url }}">视频缓冲排查</a></li></ul></section>
