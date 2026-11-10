@@ -1,80 +1,44 @@
 <!doctype html>
-<html lang="zh-CN">
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2NJELDR3X"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-D2NJELDR3X');
-  </script>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-site-verification" content="o5L7XSaaQ47cSW0MYdBlAvXkc1hf6uQMmIffhdxhEzU">
-  <meta name="msvalidate.01" content="72D1368100F04E271E3EC2CC04D06B2D">
-
-  <title>{{ page.title | default: site.title }}</title>
+<html lang="zh-CN"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light"><meta name="theme-color" content="#10243c">
+  <meta name="google-site-verification" content="o5L7XSaaQ47cSW0MYdBlAvXkc1hf6uQMmIffhdxhEzU"><meta name="msvalidate.01" content="72D1368100F04E271E3EC2CC04D06B2D">
+  <title>{{ page.title | default: site.title | escape }}</title>
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
-
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
   {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
-
   <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
   <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
   <meta property="og:type" content="{{ page.og_type | default: 'article' }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:site_name" content="{{ site.title | escape }}">
   <meta property="og:locale" content="zh_CN">
-  {% if page.og_image %}<meta property="og:image" content="{{ page.og_image | absolute_url }}">{% endif %}
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": {{ page.schema_type | default: "WebPage" | jsonify }},
-    "name": {{ page.title | default: site.title | jsonify }},
-    {% if page.schema_type == "Article" %}"headline": {{ page.heading | default: page.title | jsonify }},{% endif %}
-    "description": {{ page.description | default: site.description | jsonify }},
-    "url": {{ page.url | absolute_url | jsonify }},
-    "inLanguage": "zh-CN"{% if page.date_modified or page.schema_type != "WebSite" %},{% endif %}
-    {% if page.date_modified %}"dateModified": {{ page.date_modified | jsonify }}{% if page.schema_type != "WebSite" %},{% endif %}{% endif %}
-    {% if page.schema_type != "WebSite" %}"isPartOf": {
-      "@type": "WebSite",
-      "name": {{ site.title | jsonify }},
-      "url": {{ "/" | absolute_url | jsonify }}
-    }{% if page.schema_type == "Article" %},{% endif %}{% endif %}
-    {% if page.schema_type == "Article" %}"mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": {{ page.url | absolute_url | jsonify }}
-    }{% endif %}
-  }
-  </script>
-
+  <meta property="og:image" content="{{ page.og_image | default: '/assets/images/og-cover.png' | absolute_url }}">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":{{ page.schema_type | default: 'WebPage' | jsonify }},
+    "name":{{ page.title | default: site.title | jsonify }},
+    {% if page.schema_type == 'Article' %}"headline":{{ page.heading | default: page.title | jsonify }},"author":{"@type":"Organization","name":{{ site.title | jsonify }}}{% if page.date_published %},"datePublished":{{ page.date_published | jsonify }}{% endif %},{% endif %}
+    "description":{{ page.description | default: site.description | jsonify }},
+    "url":{{ page.url | absolute_url | jsonify }},
+    "inLanguage":"zh-CN",
+    "dateModified":{{ page.date_modified | default: '2026-11-10' | jsonify }},
+    "isPartOf":{"@type":"WebSite","name":{{ site.title | jsonify }},"url":{{ '/' | absolute_url | jsonify }}}
+    {% if page.schema_type == 'Article' %},"mainEntityOfPage":{"@type":"WebPage","@id":{{ page.url | absolute_url | jsonify }}}{% endif %}
+  }</script>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
-<body>
-  <header class="site-header">
-    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav aria-label="主导航">
-      <a href="{{ '/' | relative_url }}">首页</a>
-      <a href="{{ '/#problems' | relative_url }}">问题导航</a>
-      <a href="{{ '/guide/network-tool-for-beginners/' | relative_url }}">网络工具</a>
-      <a href="{{ '/review/juechen-accelerator-scenarios/' | relative_url }}">绝尘加速器</a>
-      <a href="{{ '/about/' | relative_url }}">关于</a>
-    </nav>
-  </header>
-
-  <main class="page">
-    {{ content }}
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p><strong>{{ site.title }}</strong>：先判断问题，再测试原因，最后决定是否需要网络工具。</p>
-      <p><a href="{{ '/about/' | relative_url }}">网站用途与内容原则</a> · <a href="{{ '/' | relative_url }}">问题导航</a></p>
-      <p>本站为第三方信息整理站，不代表文中提及的软件、平台或服务。涉及产品功能、政策和兼容性时，以对应官方当前说明为准；请遵守所在地法律法规及相关平台规则。</p>
-    </div>
-  </footer>
-</body>
-</html>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2NJELDR3X"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-D2NJELDR3X');</script>
+</head><body>
+<a class="skip-link" href="#main-content">跳转到正文</a>
+<header class="site-header"><div class="header-inner">
+ <a class="brand" href="{{ '/' | relative_url }}" aria-label="网络访问稳定性指南，返回首页"><img src="{{ '/assets/images/favicon.svg' | relative_url }}" alt="" width="40" height="40"><span class="brand-copy"><strong>网络稳定指南</strong><small>看清问题，再找方法</small></span></a>
+ <nav class="primary-nav" aria-label="主导航"><a href="{{ '/' | relative_url }}">首页</a><a href="{{ '/#problems' | relative_url }}">问题指南</a><a href="{{ '/guide/network-tool-for-beginners/' | relative_url }}">工具入门</a><a href="{{ '/review/juechen-accelerator-faq/' | relative_url }}">绝尘使用</a><a class="nav-cta" href="https://ximenshu.github.io/vpn-selection-guide/" target="_blank" rel="noopener noreferrer">VPN 怎么选 <span aria-hidden="true">↗</span></a></nav>
+</div></header>
+<main class="page{% if page.url == '/' %} home-page{% endif %}" id="main-content">{{ content }}</main>
+<footer class="site-footer"><div class="footer-inner"><div class="footer-top"><div><a class="footer-brand" href="{{ '/' | relative_url }}">网络稳定指南</a><p>从具体症状出发，找到清楚、能执行的排查步骤。</p></div><div><strong>站内入口</strong><a href="{{ '/#problems' | relative_url }}">问题指南</a><a href="{{ '/review/juechen-accelerator-faq/' | relative_url }}">绝尘使用指南</a><a href="{{ '/about/' | relative_url }}">关于本站</a></div><div><strong>友情链接</strong><a href="https://juechenjsq.github.io/vpn-guide/" target="_blank" rel="noopener noreferrer">绝尘加速器 ↗</a><a href="https://juechenvpn.netlify.app/" target="_blank" rel="noopener noreferrer">加速器使用 ↗</a><a href="https://ximenshu.github.io/vpn-selection-guide/" target="_blank" rel="noopener noreferrer">VPN 怎么选 ↗</a></div></div><div class="footer-bottom"><span>© {{ 'now' | date: '%Y' }} 网络稳定指南 · 第三方信息站</span><span>本站不代表文中提及的软件、平台或服务，产品信息以对应官方当前说明为准。</span></div></div></footer>
+</body></html>

@@ -5,7 +5,7 @@ description: "区分持续高 Ping、延迟尖峰和丢包，用有线/无线、
 permalink: /guide/game-latency-guide/
 og_type: article
 schema_type: Article
-date_modified: "2026-09-25"
+date_modified: "2026-11-10"
 ---
 
 <h1>游戏延迟高怎么办：先区分“持续高”还是“突然跳高”</h1>
@@ -27,6 +27,7 @@ date_modified: "2026-09-25"
 <p>如果 Ping 平时正常，但家里有人上传照片、云盘同步或下载时突然飙高，线索更接近本地排队/拥塞，而不是游戏区服突然变远。可以在其他大流量任务暂停前后比较同一局或同一测试目标；如果尖峰随负载明显变化，先处理家庭网络占用。</p>
 
 
+<h2>把延迟问题记录成一句可判断的话</h2><p>例如：“同一台电脑连接同一个区服，平时约 45 ms；家里开始同步大文件后，延迟反复跳到 180 ms；暂停同步后恢复。”这是一条<strong>示例记录</strong>，不是实测数据。重点是记下什么时候发生、是否只在某一操作时发生，以及停止操作后能否恢复。</p><p>打游戏时 Ping 原本很稳，一旦有人上传视频或同步云盘，延迟就突然飙高？先暂停上传，再观察同一区服延迟是否恢复。如果明显恢复，优先检查家里是否出现上行拥塞。此时单纯换区服或连接线路，未必能解决。</p>
 <h2>不要用下载速度解释所有游戏延迟</h2>
 <p>实时游戏更关心往返时间和稳定性。高下载带宽不等于到游戏服务器的路径更短，也不能排除排队、抖动或丢包。Cloudflare 的网络基础资料也把 latency/RTT 与带宽区分开来。</p>
 
@@ -67,3 +68,6 @@ date_modified: "2026-09-25"
 <li><a href="{{ '/guide/peak-hour-network-slow/' | relative_url }}">为什么只有晚上 Ping 变高</a></li>
 <li><a href="{{ '/review/juechen-accelerator-scenarios/' | relative_url }}">绝尘加速器哪些网络问题值得测试</a></li>
 </ul>
+
+<aside class="article-promo" aria-label="广告：绝尘加速器"><div class="ad-label">广告 · 绝尘加速器</div><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="访问绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器横幅广告：点击查看服务方介绍" width="1280" height="160" loading="lazy" decoding="async"></a><p class="ad-footnote">这是一则推广广告。是否适合你的设备、所在地区及使用场景，请以实际产品说明和体验为准。</p></aside>
+<section class="article-end" aria-label="继续阅读"><h2>接下来可以看</h2><ul><li><a href="{{ '/guide/game-packet-loss-fix/' | relative_url }}">游戏丢包怎么排查</a></li><li><a href="{{ '/guide/peak-hour-network-slow/' | relative_url }}">晚间网络变慢</a></li></ul></section>

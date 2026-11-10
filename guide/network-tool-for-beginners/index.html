@@ -5,7 +5,7 @@ description: "新手用控制变量的方法记录使用前基线，再比较连
 permalink: /guide/network-tool-for-beginners/
 og_type: article
 schema_type: Article
-date_modified: "2026-09-25"
+date_modified: "2026-11-10"
 ---
 
 <h1>第一次使用网络加速工具：先做基线，再谈“有没有效果”</h1>
@@ -41,6 +41,12 @@ date_modified: "2026-09-25"
 </ul>
 <p class="meta-note">安装后如果出现与网络功能明显无关的权限请求、来源无法核实或系统持续安全警告，优先停止并回到官方来源核对；不要为了完成测试而绕过系统安全提示。</p>
 
+<h2>照着这个格式记录连接前后结果</h2><pre><code>设备 / 系统：
+连接方式：Wi-Fi / 有线 / 移动网络
+目标：同一视频 / 同一区服 / 同一会议
+未连接：症状、发生次数、测试时间
+已连接：症状、发生次数、测试时间
+是否重复验证：是 / 否</code></pre><p>比如你主要想改善视频缓冲，就记录完整播放期间的停顿次数；主要想改善游戏延迟，就记录同一区服的波动，而不是只看工具界面上的“已连接”。结果不稳定就多测几次，避免因为一次好运气作出购买决定。</p>
 <h2>什么结果说明“先别继续折腾线路”</h2>
 <p>如果设备到家庭路由器本身就不稳定、有线明显好于 Wi‑Fi、或者只有一台设备持续异常，先解决本地问题通常更合理。线路工具不是修复无线干扰、老旧网卡或设备性能问题的替代品。</p>
 
@@ -60,3 +66,6 @@ date_modified: "2026-09-25"
 
 <h2>如果还要在多台设备上使用</h2>
 <p>不要把“支持 Windows、Android、iOS”理解成“所有设备都能同时用”。平台兼容、可安装设备数、同时连接数和账号规则是不同概念，见 <a href="{{ '/guide/multi-device-network-tool/' | relative_url }}">多设备网络工具怎么选</a>。</p>
+
+<aside class="article-promo" aria-label="广告：绝尘加速器"><div class="ad-label">广告 · 绝尘加速器</div><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="访问绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器横幅广告：点击查看服务方介绍" width="1280" height="160" loading="lazy" decoding="async"></a><p class="ad-footnote">这是一则推广广告。是否适合你的设备、所在地区及使用场景，请以实际产品说明和体验为准。</p></aside>
+<section class="article-end" aria-label="继续阅读"><h2>接下来可以看</h2><ul><li><a href="{{ '/review/juechen-accelerator-faq/' | relative_url }}">绝尘首次连接指南</a></li></ul></section>

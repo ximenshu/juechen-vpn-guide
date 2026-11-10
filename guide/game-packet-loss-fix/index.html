@@ -5,7 +5,7 @@ description: "游戏瞬移、卡死、语音断字或出现 packet loss 时，�
 permalink: /guide/game-packet-loss-fix/
 og_type: article
 schema_type: Article
-date_modified: "2026-09-25"
+date_modified: "2026-11-10"
 ---
 
 <h1>游戏丢包怎么办：不要先问“换哪个工具”，先找丢在哪一段</h1>
@@ -27,6 +27,8 @@ date_modified: "2026-09-25"
 <div class="callout"><strong>电脑上可以直接做：</strong>Windows 可在命令提示符运行 <code>ipconfig</code> 找到“默认网关”，再运行 <code>ping -t 网关地址</code>；macOS 可在终端运行 <code>route -n get default</code> 查看网关，再运行 <code>ping 网关地址</code>。测试几分钟后观察是否出现超时或明显尖峰。</div>
 <p>如果本地网关就出现稳定可复现的丢包或大幅延迟尖峰，优先查 Wi‑Fi 信号、无线干扰、网卡、网线或路由器；此时直接换远端线路并不能证明根因被解决。</p>
 
+<h2>Windows 实际操作示例</h2><p>按 <kbd>Win</kbd> + <kbd>R</kbd>，输入 <code>cmd</code> 打开命令提示符。先查默认网关，再对它发出 30 次测试请求：</p><pre><code>ipconfig
+ping 192.168.1.1 -n 30</code></pre><p><strong>注意：</strong><code>192.168.1.1</code> 只是例子，请替换为 <code>ipconfig</code> 中实际显示的“默认网关”。观察“已发送、已接收、丢失”及延迟变化。路由器可能限制 ICMP 回复，因此超时需要结合有线对照、其他设备和实际游戏表现判断。</p>
 <h2>第三步：本地稳定后，再测一个稳定公网目标</h2>
 <p>如果网关稳定，再对一个长期稳定的公网目标做持续测试。若本地网关正常、而公网阶段出现问题，范围才更接近运营商或外部路径。</p>
 <div class="callout warning">
@@ -64,3 +66,6 @@ date_modified: "2026-09-25"
 <li><a href="{{ '/guide/game-latency-guide/' | relative_url }}">Ping 高与延迟尖峰怎么判断</a></li>
 <li><a href="{{ '/guide/peak-hour-network-slow/' | relative_url }}">只有晚上丢包/延迟变差怎么验证</a></li>
 </ul>
+
+<aside class="article-promo" aria-label="广告：绝尘加速器"><div class="ad-label">广告 · 绝尘加速器</div><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="访问绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器横幅广告：点击查看服务方介绍" width="1280" height="160" loading="lazy" decoding="async"></a><p class="ad-footnote">这是一则推广广告。是否适合你的设备、所在地区及使用场景，请以实际产品说明和体验为准。</p></aside>
+<section class="article-end" aria-label="继续阅读"><h2>接下来可以看</h2><ul><li><a href="{{ '/guide/game-latency-guide/' | relative_url }}">游戏延迟高怎么办</a></li><li><a href="{{ '/guide/peak-hour-network-slow/' | relative_url }}">晚高峰网络变慢</a></li></ul></section>

@@ -5,7 +5,7 @@ description: "测速正常但会议仍卡时，从发送/接收方向、RTT、�
 permalink: /guide/remote-work-network/
 og_type: article
 schema_type: Article
-date_modified: "2026-09-25"
+date_modified: "2026-11-10"
 ---
 
 <h1>远程办公网络不稳定怎么办：先把“会议卡”翻译成具体症状</h1>
@@ -36,6 +36,7 @@ date_modified: "2026-09-25"
 
 <p>Google Meet 的官方排障同样建议在可用时测试 Ethernet、优先较稳定的 5 GHz Wi‑Fi，并检查设备资源与后台程序；因此上面的三步既能排除网络链路，也能快速发现设备负载问题。</p>
 
+<h2>会议里怎么收集更有用的线索</h2><p>会议异常时，先记下是“别人听不清你”，还是“你听不清别人”；再看软件是否提供会议质量或网络统计信息。常见指标包括往返延迟（RTT）、抖动（jitter）和丢包（packet loss），具体入口会随软件和版本变化。</p><p>如果别人听你断断续续，可先暂停云盘备份、视频上传等任务并重试；如果只是画面停顿而音频正常，检查摄像头、CPU 占用和视频设置。不要只拿一次下载测速下结论。</p>
 <h2>远程桌面和视频会议不要混为一谈</h2>
 <p>远程桌面更敏感于交互延迟；视频会议则同时依赖音频、视频和上行稳定。若只有远程桌面操作“慢半拍”而会议正常，应优先查 RTT、目标主机和远程服务路径，而不是直接沿用视频会议的带宽判断。</p>
 
@@ -51,3 +52,6 @@ date_modified: "2026-09-25"
 <li><a href="https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0070504">Zoom Support：Meeting and phone statistics</a></li>
 <li><a href="https://learn.microsoft.com/en-us/microsoftteams/qos-in-teams">Microsoft Learn：Quality of Service in Teams</a></li>
 </ul>
+
+<aside class="article-promo" aria-label="广告：绝尘加速器"><div class="ad-label">广告 · 绝尘加速器</div><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="访问绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器横幅广告：点击查看服务方介绍" width="1280" height="160" loading="lazy" decoding="async"></a><p class="ad-footnote">这是一则推广广告。是否适合你的设备、所在地区及使用场景，请以实际产品说明和体验为准。</p></aside>
+<section class="article-end" aria-label="继续阅读"><h2>接下来可以看</h2><ul><li><a href="{{ '/guide/public-wifi-safety/' | relative_url }}">公共 Wi-Fi 安全</a></li></ul></section>

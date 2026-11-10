@@ -2,17 +2,17 @@
 layout: null
 ---
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>{{ '/' | absolute_url }}</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>{{ '/guide/video-loading-slow/' | absolute_url }}</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>{{ '/guide/streaming-buffering-fix/' | absolute_url }}</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>{{ '/guide/game-latency-guide/' | absolute_url }}</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>{{ '/guide/game-packet-loss-fix/' | absolute_url }}</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>{{ '/guide/peak-hour-network-slow/' | absolute_url }}</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>{{ '/guide/remote-work-network/' | absolute_url }}</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>{{ '/guide/public-wifi-safety/' | absolute_url }}</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>{{ '/guide/network-tool-for-beginners/' | absolute_url }}</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>{{ '/guide/multi-device-network-tool/' | absolute_url }}</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>{{ '/review/juechen-accelerator-scenarios/' | absolute_url }}</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>{{ '/review/juechen-accelerator-faq/' | absolute_url }}</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>{{ '/about/' | absolute_url }}</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>{{ '/' | absolute_url }}</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>{{ '/guide/video-loading-slow/' | absolute_url }}</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>{{ '/guide/streaming-buffering-fix/' | absolute_url }}</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>{{ '/guide/game-latency-guide/' | absolute_url }}</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>{{ '/guide/game-packet-loss-fix/' | absolute_url }}</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>{{ '/guide/peak-hour-network-slow/' | absolute_url }}</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>{{ '/guide/remote-work-network/' | absolute_url }}</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>{{ '/guide/public-wifi-safety/' | absolute_url }}</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>{{ '/guide/network-tool-for-beginners/' | absolute_url }}</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>{{ '/guide/multi-device-network-tool/' | absolute_url }}</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>{{ '/review/juechen-accelerator-scenarios/' | absolute_url }}</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>{{ '/review/juechen-accelerator-faq/' | absolute_url }}</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>{{ '/about/' | absolute_url }}</loc><lastmod>2026-11-10</lastmod></url>
 </urlset>

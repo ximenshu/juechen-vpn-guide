@@ -5,7 +5,7 @@ description: "视频页面能打开但迟迟不能开始播放时，按平台、
 permalink: /guide/video-loading-slow/
 og_type: article
 schema_type: Article
-date_modified: "2026-09-25"
+date_modified: "2026-11-10"
 ---
 
 <h1>视频一直加载很慢怎么办：先判断“开始不了”发生在哪一层</h1>
@@ -30,6 +30,7 @@ date_modified: "2026-09-25"
 <p>如果视频要等很久才开始，但开始后能稳定播放较长时间，这个现象与“播放几分钟就不断缓冲”不同。前者应优先比较平台、客户端和连接路径；后者更需要观察持续吞吐和网络瞬时波动。</p>
 <p>换网络、更新客户端、重启设备这些基础动作可以做，但它们的价值在于“对照结果”，不是动作本身。一次只改一个条件，才知道问题更接近客户端、设备还是网络。</p>
 
+<h2>转圈、黑屏与报错，不一定是同一个问题</h2><ul><li><strong>一直转圈，没有明确错误码：</strong>先比较同一视频在 App 与浏览器、Wi-Fi 与移动网络的区别。</li><li><strong>显示登录、地区或内容不可用：</strong>优先查账号和平台提示，反复测速通常没有帮助。</li><li><strong>有声音但始终黑屏：</strong>还要考虑浏览器硬件加速、解码或显示问题；不要直接归因于带宽。</li><li><strong>点播放就闪退：</strong>先检查应用更新和设备资源，再处理网络因素。</li></ul>
 <h2>按结果继续排查</h2>
 <h3>只有一个 App 慢</h3>
 <p>先用同一账号、同一视频在浏览器或另一受支持客户端测试。如果浏览器正常，优先处理 App 本身：更新、重新启动、检查缓存或重新安装，而不是先更换整个家庭网络。</p>
@@ -54,3 +55,6 @@ date_modified: "2026-09-25"
 <li><a href="https://support.google.com/youtube/answer/10232409">YouTube Help：Troubleshoot streaming &amp; video issues</a> — 官方加载/缓冲排查步骤。</li>
 <li><a href="https://support.google.com/youtube/answer/78358">YouTube Help：System requirements &amp; supported devices</a> — 官方持续带宽参考。</li>
 </ul>
+
+<aside class="article-promo" aria-label="广告：绝尘加速器"><div class="ad-label">广告 · 绝尘加速器</div><a class="promo-image" href="https://www.juechenjsq.co/" target="_blank" rel="sponsored noopener noreferrer" aria-label="访问绝尘加速器网站（广告）"><img src="{{ '/assets/images/juechen-ad-banner.jpg' | relative_url }}" alt="绝尘加速器横幅广告：点击查看服务方介绍" width="1280" height="160" loading="lazy" decoding="async"></a><p class="ad-footnote">这是一则推广广告。是否适合你的设备、所在地区及使用场景，请以实际产品说明和体验为准。</p></aside>
+<section class="article-end" aria-label="继续阅读"><h2>接下来可以看</h2><ul><li><a href="{{ '/guide/streaming-buffering-fix/' | relative_url }}">视频播放中缓冲</a></li></ul></section>
